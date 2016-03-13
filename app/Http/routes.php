@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+	'uses'=> '\Prego\Http\Controllers\HomeController@index',
+	'as'=> 'index'
+]);
 
 /*
 |--------------------------------------------------------------------------
